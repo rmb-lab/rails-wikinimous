@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Wikinimous</title>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <h2><%= @article.title %></h2>
+    <p><%= @article.content %></p>
+
+    <div style="display: flex">
+      <%= link_to "Edit", edit_article_path(@article) %>
+      <%= link_to "Delete", article_path(@article),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+    </div>
+
+  </body>
+</html>

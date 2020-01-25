@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Wikinimous</title>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= form_for(@article) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content %>
+
+      <%= f.submit %>
+    <% end %>
+  </body>
+</html>
